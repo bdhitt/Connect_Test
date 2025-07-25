@@ -1,0 +1,52 @@
+---
+title: "My Course Website"
+author: "Brianna Hitt"
+format: 
+  dashboard:
+    orientation: columns
+    theme: yeti
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(ggformula)
+```
+
+```{r}
+gf_dist("norm", mu = 10, sd = 2)
+```
+
+## Column
+
+What happens when I type here? 
+
+### Row 
+
+What happens when I type here instead? 
+
+```{r}
+#| component: valuebox
+#| title: Another distribution
+gf_dist("exp", rate = 200)
+```
+
+
+### Row
+
+```{r}
+#| component: valuebox
+#| title: A different distribution
+gf_dist("chisq", df = 5)
+```
+
+
+## Column
+
+I'm saying stuff about the Poisson distribution. 
+
+
+```{r}
+#| title: More stuff
+gf_dist("pois", lambda = 5)
+```
